@@ -1,3 +1,6 @@
+# remove some Windows trashes
+# like Zone.Identifier, Thumbs.db and Thumbs.db:encryptable
+
 import sys
 import os
 import re
