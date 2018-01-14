@@ -15,6 +15,7 @@ def create_folder(path_):
     if not os.path.exists(path_):
         os.mkdir(path_)
 
+
 os.chdir(path)
 images_folder = os.path.join(path, 'images')
 create_folder(images_folder)
