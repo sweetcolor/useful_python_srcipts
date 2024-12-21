@@ -1,0 +1,2 @@
+class VideoMergeError(Exception):
+    pass

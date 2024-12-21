@@ -1,6 +1,51 @@
 # Useful python scripts
 some useful scripts for different home admin works
 
+# Requironments:
+
+Python 3.6+
+
+# Prepare
+
+1. copy environment variables from example:
+```shell
+cp env.example.sh env.sh
+```
+
+2. Overwhite environment variables in `env.sh` file what you need.
+
+3. Set environment variables in your local session:
+```shell
+source env.sh
+```
+
+4. (Optional) Create python virtualenv:
+```shell
+virtualenv -p /usr/bin/python3.8 your_path_to_python_env
+```
+
+Then activate:
+```shell
+source your_path_to_python_env/bin/activate
+```
+
+
+## video-merge
+merge all videos with subtitles in directory
+
+default video type `.mp4`
+default subtitle type `.vtt`
+
+```shell
+python3 video-merge/main.py
+```
+It merge video and subtitle in new file.
+Use `-C` parameter to remove original files:
+
+```shell
+python3 video-merge/main.py -C
+```
+
 ## list_directory_with_file_sizes.py
 
 #### Overview
