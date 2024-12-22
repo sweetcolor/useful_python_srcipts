@@ -1,9 +1,10 @@
 # Useful python scripts
 some useful scripts for different home admin works
 
-# Requironments:
+# Requirements:
 
-Python 3.6+
+* Python 3.6+
+
 
 # Prepare
 
@@ -29,21 +30,32 @@ Then activate:
 source your_path_to_python_env/bin/activate
 ```
 
-
 ## video-merge
+
+### Requirements
+
+* ffmpeg
+
+### Install
+
+```shell
+pip3 install -r ./requirements.txt
+```
+
 merge all videos with subtitles in directory
 
 default video type `.mp4`
 default subtitle type `.vtt`
 
 ```shell
-python3 video-merge/main.py
+python3 video-merge/video_merge.py
 ```
+
 It merge video and subtitle in new file.
 Use `-C` parameter to remove original files:
 
 ```shell
-python3 video-merge/main.py -C
+python3 video-merge/video_merge.py -C
 ```
 
 ## list_directory_with_file_sizes.py
