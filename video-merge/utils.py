@@ -14,7 +14,7 @@ def convert_to_time(file_path: pathlib.Path):
 
 def convert_to_index(file_path: pathlib.Path):
     group_name = 'index'
-    return int(re.match(f'(?P<{group_name}>\d\d?)-', file_path.name).group(group_name))
+    return int(re.match(f'(?P<{group_name}>\d+?)-', file_path.name).group(group_name))
 
 
 # remove forbidden characters for linux and windows path

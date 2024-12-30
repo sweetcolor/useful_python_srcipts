@@ -24,7 +24,10 @@ info['date'] = date.div.string
 info['learning_paths'] = [a.string for a in learning_paths.ul.find_all('a')]
 info['topics'] = [a.string for a in topics.ul.find_all('a')]
 
-info['resources'] = [a['href'] for a in detail.find('div', class_='bottom').ul.find_all('a')]
+resources = detail.find('div', class_='bottom')
+
+if resources is not None:
+    info['resources'] = [a['href'] for a in detail.find('div', class_='bottom').ul.find_all('a')]
 
 content = content.div
 info['sections'] = []
