@@ -1,3 +1,5 @@
+import functools
+import json
 import pathlib
 import re
 import time
@@ -15,6 +17,10 @@ def convert_to_time(file_path: pathlib.Path):
 def convert_to_index(file_path: pathlib.Path):
     group_name = 'index'
     return int(re.match(f'(?P<{group_name}>\d+?)-', file_path.name).group(group_name))
+
+def count_all_items(json_file) -> int:
+    info = json.load(json_file)
+    return functools.reduce(lambda total, section: total + len(section['items']), info['sections'], 0)
 
 
 # remove forbidden characters for linux and windows path

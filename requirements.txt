@@ -1,5 +1,8 @@
 beautifulsoup4==4.12.3
+cached-property==2.0.1
+haralyzer==2.4.0
 html5lib==1.1
+python-dateutil==2.9.0.post0
 six==1.17.0
 soupsieve==2.6
 webencodings==0.5.1
